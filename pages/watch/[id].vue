@@ -3,10 +3,7 @@
     <Navbar />
       <v-main>
         <v-sheet class="pa-2" color="dark">
-          <Artplayer @get-instance="getInstance" :option="option" :style="style" />
-            <div>
-              Page visits: {{ watchID }}
-            </div>
+          <Artplayer :option="option" :style="style" />
         </v-sheet>
       <Footer />
     </v-main>
@@ -14,39 +11,21 @@
 </template>
 
 <script setup>
+import { ANIME } from "@consumet/extensions"
 
-</script>
+const route = useRoute();
+const { id } = route.params;
+const main = async (watchID) => {
+  const data = await $fetch("/api/stream/"+ watchID)
+  return data.watchURL
+}
 
-<script>
-import Artplayer from './Artplayer.vue';
+var streamURL
+try {streamURL = await main(id)} catch (error) {console.error(error)}
 
-export default {
-  data() {
-    const route = useRoute()
-    const watchID = route.params.id
-    const {pending,data } = useFetch("api/stream/"+ watchID)
-    console.log(data);
-    
-    return {
-      option: {
-        url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
-        autoSize: true,
-      },
-      style: {
-        width: '600px',
+let option = { url: streamURL, autoSize: true }
+let style = {width: '600px',
         height: '400px',
-        margin: '60px auto 0',
-      },
-      watchID: data
-    };
-  },
-  components: {
-    Artplayer,
-  },
-  methods: {
-    getInstance(art) {
-      console.log(art);
-    },
-  },
-};
+        margin: '60px auto 0',}
 </script>
+
