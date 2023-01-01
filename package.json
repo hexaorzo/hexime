@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "HOST=0.0.0.0 nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/supabase": "^0.3.0",
+    "@sidebase/nuxt-auth": "^0.3.2",
+    "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.0.96",
+    "sass": "^1.56.1",
+    "vuetify": "^3.0.1",
+    "artplayer": "latest",
+    "artplayer-plugin-hls-quality": "latest",
+    "hls.js": "^1.2.9",
+    "@consumet/extensions": "latest"
+  }
+}
