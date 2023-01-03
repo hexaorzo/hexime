@@ -1,8 +1,11 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@sidebase/nuxt-auth'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@sidebase/nuxt-auth'
+  ],
   auth: {
-    origin: 'https://3000-hexaorzo-hexime-its35lr2wjx.ws-us80.gitpod.io',
+    origin: 'https://3000-hexaorzo-hexime-519h51830yt.ws-us80.gitpod.io',
   },
   css: [
     'vuetify/lib/styles/main.sass',
