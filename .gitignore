@@ -7,3 +7,4 @@ node_modules
 .env
 dist
 .gitpod.yml
+package-lock.json
