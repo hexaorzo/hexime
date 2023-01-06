@@ -1,5 +1,5 @@
 <template>
-    <div class="pa-6">
+    <div class="pa-12 ">
       <article class="prose max-w-none">
         <h1>Konnichiwa {{ data?.user?.name }}!</h1>
       </article>

@@ -11,9 +11,7 @@
                             </label>
                         </div>
                         <div class="flex-1">
-                            <NuxtLink to="/">
-                                <a class="btn btn-ghost normal-case text-xl">Hexime</a>
-                            </NuxtLink>
+                                <a class="btn btn-ghost normal-case text-xl" href="/">Hexime</a>
                         </div>
                         <div class="flex-none">
                             <button class="btn btn-ghost btn-circle">
@@ -28,8 +26,8 @@
                                 </label>
                                 <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-300 rounded-box w-52">
                                     <div v-if="status === 'authenticated'">
-                                        <li>
-                                            <NuxtLink to="/profile"><a>Profile</a></NuxtLink>
+                                        <li >
+                                            <a href="/profile">Profile</a>
                                         </li>
                                         <li @click="signOut({ callbackUrl: '/' })">
                                             <a>Logout</a>
