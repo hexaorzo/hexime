@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@sidebase/nuxt-auth"],
   auth: {
-    origin: "https://3000-hexaorzo-hexime-519h51830yt.ws-us81.gitpod.io",
+    origin: "https://hexaorzo-fantastic-space-palm-tree-p9p54prrvj9f9r95-3000.preview.app.github.dev",
   },
   css: [
     "vuetify/lib/styles/main.sass",
