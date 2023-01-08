@@ -10,3 +10,5 @@ dist
 package-lock.json
 .local
 .config
+.bash_history
+.gitconfig
