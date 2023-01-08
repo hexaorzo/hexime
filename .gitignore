@@ -8,3 +8,5 @@ node_modules
 dist
 .gitpod.yml
 package-lock.json
+.local
+.config
