@@ -2,6 +2,7 @@ import { NuxtAuthHandler } from '#auth';
 import GithubProvider from 'next-auth/providers/github';
 import DiscordProvider from "next-auth/providers/discord";
 export default NuxtAuthHandler({
+  secret: 'hehehehehe',
   providers: [
     DiscordProvider.default({
       clientId: '944635371881373727',
