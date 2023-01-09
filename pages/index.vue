@@ -7,7 +7,7 @@
       <div class="carousel max-w-none p-4 space-x-4 bg-neutral rounded-box">
         <div v-for="item in trending.results" class="card w-96 bg-base-100 shadow-xl" >
           
-          <a class="w-36 transform p-2 transition duration-300 ease-out hover:scale-105">
+          <a :href="'/info/'+item.id+'/'" class="w-36 transform p-2 transition duration-300 ease-out hover:scale-105">
             <div class="aspect-w-7 aspect-h-9 relative w-30">
               <img
                 alt="Cover Image"
@@ -35,7 +35,7 @@
       <div class="carousel max-w-none p-4 space-x-4 bg-neutral rounded-box">
         <div v-for="item in popular.results" class="card w-96 bg-base-100 shadow-xl" >
           
-          <a class="w-36 transform p-2 transition duration-300 ease-out hover:scale-105">
+          <a :href="'/info/'+item.id+'/'" class="w-36 transform p-2 transition duration-300 ease-out hover:scale-105">
             <div class="aspect-w-7 aspect-h-9 relative w-30">
               <img
                 alt="Cover Image"
