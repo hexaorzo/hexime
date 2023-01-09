@@ -20,5 +20,19 @@
     "daisyui": "^2.46.1",
     "sass": "^1.56.1",
     "vuetify": "^3.0.1"
-  }
+  },
+  "name": "hexime",
+  "description": "",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexaorzo/hexime.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hexaorzo/hexime/issues"
+  },
+  "homepage": "https://github.com/hexaorzo/hexime#readme"
 }
