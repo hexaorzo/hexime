@@ -116,12 +116,5 @@ const endMonth = toMon(aniInfo.endDate.month);
         </div>
       </div>
     </div>
-
-    <div class="mockup-code">
-      <pre><div class="px-6"><code>{{ MALinfo }}</code></div></pre>
-    </div>
-    <div class="mockup-code">
-      <pre><div class="px-6"><code>{{ aniInfo }}</code></div></pre>
-    </div>
   </div>
 </template>

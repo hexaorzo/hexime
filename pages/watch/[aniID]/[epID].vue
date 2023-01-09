@@ -2,26 +2,40 @@
   <div class="py-6 px-2">
     <div class="flex justify-center">
       <div class="flex pb-4 w-3/4 aspect-video">
-        <iframe
-          class="w-full h-full"
-          :src="
-            'https://hexaorzo-fantastic-space-palm-tree-p9p54prrvj9f9r95-3000.preview.app.github.dev/player.html#' +
-            streamHash
-          "
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+        <Plyr :streamHash="streamHash" />
       </div>
     </div>
     <div class="flex justify-center">
       <div class="flex pb-4 w-3/4 gap-2">
-        <a :href="'/watch/'+aniID+'/1'" class="flex-none w-12 h-10 btn btn-secondary btn-sm">&lt;&lt;</a>
-        <a class="grow h-10 btn btn-secondary btn-sm" :href="'/watch/'+aniID+'/'+(parseInt(epID)-1)" v-if="epID>1">&lt; Prev. Ep.</a>
-        <a class="grow h-10 btn btn-secondary btn-sm btn-disabled" v-else >&lt; Prev. Ep.</a>
+        <a
+          :href="'/watch/' + aniID + '/1'"
+          class="flex-none w-12 h-10 btn btn-secondary btn-sm"
+          >&lt;&lt;</a
+        >
+        <a
+          class="grow h-10 btn btn-secondary btn-sm"
+          :href="'/watch/' + aniID + '/' + (parseInt(epID) - 1)"
+          v-if="epID > 1"
+          >&lt; Prev. Ep.</a
+        >
+        <a class="grow h-10 btn btn-secondary btn-sm btn-disabled" v-else
+          >&lt; Prev. Ep.</a
+        >
 
-        <a class="grow h-10 btn btn-secondary btn-sm" :href="'/watch/'+aniID+'/'+(parseInt(epID)+1)" v-if="epList.length > epID">Next Ep. ></a>
-        <a class="grow h-10 btn btn-secondary btn-sm btn-disabled" v-else >Next Ep. ></a>
-        <a class="flex-none w-12 h-10 btn btn-secondary btn-sm" :href="'/watch/'+aniID+'/'+epList.length">>></a>
+        <a
+          class="grow h-10 btn btn-secondary btn-sm"
+          :href="'/watch/' + aniID + '/' + (parseInt(epID) + 1)"
+          v-if="epList.length > epID"
+          >Next Ep. ></a
+        >
+        <a class="grow h-10 btn btn-secondary btn-sm btn-disabled" v-else
+          >Next Ep. ></a
+        >
+        <a
+          class="flex-none w-12 h-10 btn btn-secondary btn-sm"
+          :href="'/watch/' + aniID + '/' + epList.length"
+          >>></a
+        >
       </div>
     </div>
     <div class="md:px-24">
@@ -75,11 +89,22 @@
         {{ epInfo.description }}
       </p>
       <div class="grid grid-cols-5 md:grid-cols-10 lg:grid-cols-20 gap-2">
-          <a :href="'/watch/'+aniID+'/' + episode.number" v-for="episode in aniInfo.episodes" class="grow h-10 btn btn-primary btn-sm">{{episode.number}}</a>
+        <template v-for="episode in aniInfo.episodes">
+          <a
+            v-if="episode.number != epID"
+            :href="'/watch/' + aniID + '/' + episode.number"
+            class="grow h-10 btn btn-primary btn-sm"
+          >
+            {{ episode.number }}
+          </a>
+          <a
+            v-else
+            class="grow h-10 btn btn-primary btn-sm btn-disabled"
+          >
+            {{ episode.number }}
+          </a>
+        </template>
       </div>
-
-
-
     </div>
   </div>
 </template>
