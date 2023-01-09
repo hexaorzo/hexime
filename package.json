@@ -5,7 +5,8 @@
     "dev": "HOST=0.0.0.0 nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "HOST=0.0.0.0 nuxt start"
   },
   "devDependencies": {
     "@sidebase/nuxt-auth": "^0.3.2",
